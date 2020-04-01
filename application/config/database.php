@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	'hostname' => IEMV_HOSTNAME,
+	'username' => IEMV_USERNAME,
+	'password' => IEMV_PASSWORD,
+	'database' => IEMV_DATABASE,
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
