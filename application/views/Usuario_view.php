@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    hola soy jefe del proyecto
+   Vista del usuario
 </body>
 </html>
