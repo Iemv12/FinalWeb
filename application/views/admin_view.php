@@ -30,7 +30,7 @@
                 </button>
                
                 <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
-                <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
+               <!-- <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>-->
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -38,7 +38,7 @@
                     <li class="active">
                         <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
-                    <h3 class="menu-title">Poner link</h3><!-- /.menu-title -->
+                    <h3 class="menu-title">Poner link</h3>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Link</a>
                         <ul class="sub-menu children dropdown-menu">
@@ -49,6 +49,12 @@
                             <li><i class="fa fa-puzzle-piece"></i><a href="link">link</a></li>
                          
                         </ul>
+                    </li>
+                    <li class="">
+                        <a href="<?php echo base_url('index.php/NoticiasCasos/casos');?>"> <i class="menu-icon fa fa-plus"></i>Agregar casos</a>
+                    </li>
+                    <li class="">
+                        <a href="<?php echo base_url('index.php/NoticiasCasos/noticias');?>"> <i class="menu-icon fa fa-plus"></i>Agregar noticias</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>link</a>
