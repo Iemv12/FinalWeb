@@ -13,28 +13,28 @@ class Login extends CI_Controller {
 	}
 
 	function auth() {
-		$username  = $this->input->post('username',TRUE);
+		$username  = $this->input->post('usuario',TRUE);
 		$password  = $this->input->post('password',TRUE);
 		$result    = $this->Login_model->check_user($username, $password);
 		if($result->num_rows() > 0) {
 			$data  = $result->row_array();
-			$name  = $data['username'];
+			$name  = $data['usuario'];
 			$email = $data['email'];
-			$level = $data['level'];
+			$rol = $data['rol'];
 			$sesdata = array(
-				'username'  => $username,
+				'usuario'  => $username,
 				'email'			=> $email,
-				'level'     => $level,
+				'rol'     => $rol,
 				'logged_in' => TRUE
 			);
 			$this->session->set_userdata($sesdata);
-			if($level === '1') {
+			if($rol === '1') {
 				redirect('Admin');
-			} elseif($level === '2') {
+			} elseif($rol === '2') {
 				redirect('Usuario');
 			} 
 		} else {
-			echo "<script>alert('access denied');history.go(-1);</script>";
+			echo "<script>alert('Acceso denegado');history.go(-1);</script>";
 		}
 		$this->load->view('login_view');
 	}

@@ -18,7 +18,7 @@
 					<h2>Please sign in</h2>
 				  <div class="form-group">
 				    <label for="exampleInputUsername">Username</label>
-				    <input type="username" class="form-control" id="exampleInputEmail1" name="username" aria-describedby="emailHelp" placeholder="Username">
+				    <input type="username" class="form-control" id="exampleInputEmail1" name="usuario" aria-describedby="emailHelp" placeholder="Username">
 				    </div>
 				  <div class="form-group">
 				    <label for="exampleInputPassword1">Password</label>
