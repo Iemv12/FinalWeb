@@ -2,9 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
+	
 	public function __construct() {
 		parent::__construct();
 		$this->load->helper('datos');
+		// $this->load->model('RegiCas_model');
 		
 		if($this->session->userdata('logged_in') !== TRUE) {
 			redirect('Login');
@@ -26,5 +28,24 @@ class Admin extends CI_Controller {
 			echo "Acceso Denegado !";
 		}
 	}
-
+	
+	public function Casos()
+	{
+		if($this->session->userdata('rol')==='1') {
+			$this->load->view('Casos');
+		} else {
+			echo "Acceso Denegado !";
+		}
+	}
+	
+	public function noticias()
+	{
+				if($this->session->userdata('rol')==='1') {
+					$this->load->view('Noticias');
+			} else {
+				echo "Acceso Denegado !";
+			}
+	
+	}
+	
 }

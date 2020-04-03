@@ -31,8 +31,13 @@
               
 
                
+
                 <a class="navbar-brand" href=" <?php echo base_url('index.php/Admin'); ?>"><img src="images/logo.png" alt="Logo"></a>
                 <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
+
+                <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
+               <!-- <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>-->
+
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -41,22 +46,20 @@
                         <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
 
+
                   
                     <li class="active">
                         <a href=<?php echo base_url('index.php/Admin/admin_usuarios'); ?>> <i class="menu-icon fa fa-dashboard"></i>Usuarios </a>
                     </li>
 
-                    <h3 class="menu-title">Poner link</h3><!-- /.menu-title -->
-                    <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Link</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="link">link</a></li>
-                            <li><i class="fa fa-puzzle-piece"></i><a href="link">link</a></li>
-                            <li><i class="fa fa-puzzle-piece"></i><a href="link">link</a></li>
-                            <li><i class="fa fa-puzzle-piece"></i><a href="link">link</a></li>
-                            <li><i class="fa fa-puzzle-piece"></i><a href="link">link</a></li>
-                         
-                        </ul>
+                    <h3 class="menu-title text-center">TEMA</h3>
+
+                 
+                    <li class="">
+                        <a href="<?php echo base_url('index.php/Admin/Casos/Casos');?>"> <i class="menu-icon fa fa-plus"></i>Agregar casos</a>
+                    </li>
+                    <li class="">
+                        <a href="<?php echo base_url('index.php/Admin/noticias/Noticias');?>"> <i class="menu-icon fa fa-plus"></i>Agregar noticias</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>link</a>
