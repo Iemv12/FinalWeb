@@ -8196,7 +8196,7 @@ h1, h2, h3, h4, h5,
 #sidebar {
   min-width: 270px;
   max-width: 270px;
-  background: #3445b4;
+  background: black;
   color: #fff;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;

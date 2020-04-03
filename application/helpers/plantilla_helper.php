@@ -39,30 +39,25 @@ class plantilla{
 		  		<h1><a href="index.html" class="logo">Portfolic <span>Portfolio Agency</span></a></h1>
 	        <ul class="list-unstyled components mb-5">
 	          <li class="active">
-	            <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
+	            <a href="#"><span class="fa fa-home mr-3"></span>Mapa</a>
 	          </li>
 	          <li>
-	              <a href="#"><span class="fa fa-user mr-3"></span> About</a>
+	              <a href="#"><span class="fa fa-user mr-3"></span>Noticias</a>
+			  </li>
+			  <li>
+	              <a href="#"><span class="fa fa-user mr-3"></span>Subscribete</a>
+			  </li>
+			  <li>
+	              <a href="#"><span class="fa fa-user mr-3"></span>Estadistica</a>
 	          </li>
 	          <li>
-              <a href="#"><span class="fa fa-briefcase mr-3"></span> Works</a>
+			  <a href="<?php echo base_url('index.php/Login'); ?>"><span class="fa fa-sticky-note mr-3"></span>Ingresar como Admin</a>
 	          </li>
-	          <li>
-              <a href="#"><span class="fa fa-sticky-note mr-3"></span> Blog</a>
-	          </li>
-	          <li>
-              <a href="#"><span class="fa fa-suitcase mr-3"></span> Gallery</a>
-	          </li>
-	          <li>
-              <a href="#"><span class="fa fa-cogs mr-3"></span> Services</a>
-	          </li>
-	          <li>
-              <a href="#"><span class="fa fa-paper-plane mr-3"></span> Contacts</a>
-	          </li>
+	        
 	        </ul>
 
 	        <div class="mb-5">
-						<h3 class="h6 mb-3">Subscribe for newsletter</h3>
+						<h3 class="h6 mb-3 text-center">Telegram</h3>
 						<form action="#" class="subscribe-form">
 	            <div class="form-group d-flex">
 	            	<div class="icon"><span class="icon-paper-plane"></span></div>
