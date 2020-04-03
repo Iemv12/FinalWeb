@@ -18,7 +18,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 <link rel='stylesheet' type="text/css" href=<?php echo base_url('registros_design/registros.css') ?> >
- 
+<link rel='stylesheet' type="text/css" href=<?php echo base_url('registros_design/select2-bootstrap.css') ?> >
+				
 
 <div class="container">
     <h1 class="well">Registrar Casos</h1>
@@ -44,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="row">
 							<div class="col-sm-6 form-group">
 								<label>Pais</label>
-								<select class="form-control col-sm-6" required name="pais" id="pais">
+								<select class="form-control select2-container input-lg step2-select col-sm-6" required name="pais" id="pais">
 									<option value=""></option>
 									<option value="Afganistán" id="AF">Afganistán</option>
 									<option value="Albania" id="AL">Albania</option>
@@ -330,7 +331,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script>
 	$(document).ready(function(){
 		$('#pais').select2({
-			placeholder: 'Seleccione un pais'
+			placeholder: 'Seleccione un pais',
+			theme: "bootstrap"
 		});
 	});
 </script>
