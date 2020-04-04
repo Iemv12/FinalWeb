@@ -83,6 +83,7 @@ $CI = &get_instance();
             }  ?>
         ];
 
+        console.log(cedula.length+" "+nombre.length+" "+localidad.length+" "+fecha_contagio.length)
 
         mapboxgl.accessToken = 'pk.eyJ1IjoiaWVtdjEyIiwiYSI6ImNrODA2enE1cjBjOXQzZHNiNDBuMHdxdnEifQ.y5ZwrnS5xln3wuWr6w3wkg';
 
@@ -109,9 +110,9 @@ $CI = &get_instance();
                     }
                 }]
             };
-
-            cedula = cedula[x];
-            URL = "http://173.249.49.169:88/api/test/consulta/" + cedula;
+            console.log(x);
+            cedulaa = cedula[x];
+            URL = "http://173.249.49.169:88/api/test/consulta/" + cedulaa;
             const resp = await fetch(URL);
             const data = await resp.json();
 
