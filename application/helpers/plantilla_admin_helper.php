@@ -1,22 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<?php
 
-    <link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/bootstrap/dist/css/bootstrap.min.css') ?> >
+class plantilla_admin
+{
+
+	static $instancia = null;
+
+	static function aplicar()
+	{
+
+		self::$instancia = new plantilla_admin();
+	}
+
+	function __construct()
+	{
+?>
+
+
+	<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/bootstrap/dist/css/bootstrap.min.css') ?> >
     <link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/font-awesome/css/font-awesome.min.css') ?> >
     <link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/themify-icons/css/themify-icons.css') ?> >
     <link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/flag-icon-css/css/flag-icon.min.css') ?> >
     <link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/selectFX/css/cs-skin-elastic.css') ?> >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/assets/css/style.css') ?> >
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/card.css') ?> >
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<link rel='stylesheet' type="text/css" href=<?php echo base_url('registros_design/select2-bootstrap.css') ?> >
+			
 
-</head>
+    </head>
+
 <body>
 
 <aside id="left-panel" class="left-panel">
@@ -69,70 +93,65 @@
             </div>
         </nav>
     </aside>
+ <!-- Navbar  -->
+ <div id="right-panel" class="right-panel">
 
+<!-- Header-->
+<header id="header" class="header">
 
-    <div id="right-panel" class="right-panel">
-
-        <!-- Header-->
-        <header id="header" class="header">
-
-            <div class="header-menu">
-            
-                <div class="col-sm-12">
-                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                  
-                    <h1 class="display-4 text-center">ADMIN, <?php echo $this->session->userdata('usuario');?></h1>
-                      
-                
-                </div>
-            </div>
-
-        </header><!-- /header -->
-        <!-- Header-->
-
-        <div class="breadcrumbs">
-            <div class="col-sm-4">
-                <div class="page-header float-left">
-                    <div class="page-title">
-                        <h1>Dashboard</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <ol class="breadcrumb text-right">
-                            <li class="active">Dashboard</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
+    <div class="header-menu">
+    
+        <div class="col-sm-12">
+            <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+          
+            <h1 class="display-4 text-center">ADMIN</h1>
+              
+        
         </div>
-
-        <div class="content mt-3">
-  
-                 <h1 class="text-center">
-                CONTENIDO <br>
-                -----------<br>
-                -----------<br>
-                -----------<br>
-                -----------<br>
-                -----------<br>
-                -----------<br>
-                -----------<br>
-                -----------<br>
-                </h1>
-        </div> 
     </div>
 
-   
+</header><!-- /header -->
+<!-- Header-->
 
-	<script type='text/javascript' src=<?php echo base_url('admin_desing/vendors/jquery/dist/jquery.min.js') ?>></script>
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li class="active">Dashboard</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <div id="content" class="p-4 p-md-5 pt-5">
+
+<?php
+
+}
+
+function __destruct()
+			{
+                
+				?>
+
+				</div>
+			</div>
+            <script type='text/javascript' src=<?php echo base_url('admin_desing/vendors/jquery/dist/jquery.min.js') ?>></script>
 	<script type='text/javascript' src=<?php echo base_url('admin_desing/vendors/popper.js/dist/umd/popper.min.js') ?>></script>
 	<script type='text/javascript' src=<?php echo base_url('admin_desing/vendors/bootstrap/dist/js/bootstrap.min.js') ?>></script>
 	<script type='text/javascript' src=<?php echo base_url('admin_desing/assets/js/main.js') ?>></script>
 
-    <script>
+ <script>
+            
         (function($) {
             "use strict";
 
@@ -151,6 +170,12 @@
 
     </script>
 
-</body>
-</html>
+    
+		</body>
 
+		</html>
+
+<?php
+
+			}
+		}

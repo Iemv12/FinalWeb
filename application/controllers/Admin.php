@@ -6,6 +6,7 @@ class Admin extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->helper('datos');
+		$this->load->helper('noticias');
 		$this->load->helper('urlFunction');
 		$this->load->model('RegiCas_model');	
 
@@ -39,10 +40,10 @@ class Admin extends CI_Controller {
 		}
 	}
 	
-	public function noticias()
+	public function noticias($id=0)
 	{
 				if($this->session->userdata('rol')==='1') {
-					$this->load->view('Noticias');
+					$this->load->view('Noticias', array('id'=>$id));
 			} else {
 				echo "Acceso Denegado !";
 			}

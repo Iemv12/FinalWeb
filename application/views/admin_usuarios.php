@@ -4,6 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
 <?php
+plantilla_admin::aplicar();
+?>
+
+
+<?php
 
 $CI =& GET_instance();
 
@@ -37,60 +42,42 @@ if($_POST){
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/card.css') ?> >
-
-
-
-  </head>
-<body>
-    
 <div class="container my-5">
-        
-      <h2 class="text-center">Usuarios</h2>
+               <h2 class="text-center">Usuarios</h2>
 
-      <form class="form" method="POST" > 
+                  <form class="form" method="POST" > 
 
-      <input class="from-control" value='<?php echo $data->id;?>' type="hidden" name="id"   >
+                  <input class="from-control" value='<?php echo $data->id;?>' type="hidden" name="id"   >
 
-        <div class="form-group">
-          <label for="exampleInputEmail1">Nombre</label>
-          <input type="text" value='<?php echo $data->nombre;?>' name="nombre" id="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre">
-        </div>
-        <div class="form-group ">
-            <label for="exampleInputPassword1">Correo Electronico</label>
-            <input type="text" value='<?php echo $data->email;?>' name="email" id="email" class="form-control" id="exampleInputPassword1" placeholder="Correo Electronico">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Usuario</label>
-          <input type="text" value='<?php echo $data->usuario;?>' name="usuario"  id="usuario" class="form-control" id="exampleInputPassword1" placeholder="Usuario">
-        </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Nombre</label>
+                      <input type="text" value='<?php echo $data->nombre;?>' name="nombre" id="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre">
+                    </div>
+                    <div class="form-group ">
+                        <label for="exampleInputPassword1">Correo Electronico</label>
+                        <input type="text" value='<?php echo $data->email;?>' name="email" id="email" class="form-control" id="exampleInputPassword1" placeholder="Correo Electronico">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Usuario</label>
+                      <input type="text" value='<?php echo $data->usuario;?>' name="usuario"  id="usuario" class="form-control" id="exampleInputPassword1" placeholder="Usuario">
+                    </div>
 
-        <div class="form-group">
-            <label for="exampleInputPassword1">Contrasena</label>
-            <input value='<?php echo $data->password;?>' type="password" name="password" id="password"    class="form-control" id="exampleInputPassword1" placeholder="Contrasena">
-          </div>
-      
-        <button type="submit" class="btn btn-primary mx-auto d-block">Guardar</button>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Contrasena</label>
+                        <input value='<?php echo $data->password;?>' type="password" name="password" id="password"    class="form-control" id="exampleInputPassword1" placeholder="Contrasena">
+                      </div>
+                  
+                    <button type="submit" class="btn btn-primary mx-auto d-block">Guardar</button>
 
-      </form>
-    </div>
-    
+                  </form>
+              </div>  
 
- <section>
 
-       <?php  
+
+  <div>
+ 
+<?php  
        
        $CI =& GET_instance();
 
@@ -106,51 +93,29 @@ if($_POST){
         $url = base_url("index.php/Admin/admin_usuarios/{$fila['id']}");
 
        echo " 
-       <div class='container'>
-       <div class='row userMain'>
-           <div class='col-md-3 col-sm-4'>
-           <form class='form' method='POST' > 
-
-       <div class='userBlock'>
-       <div class='backgrounImg'>
-           <img src='https://preview.ibb.co/miQjb7/photography4.jpg'>
+    
+   <div class='col-sm-4'>
+       <p>
+       $nombre
+       $usuario
+       $email
+      
        </div>
-       <div class='userImg'>
-           <img src='https://image.ibb.co/es4AG7/author4.jpg'>
-       </div>
-       <div class='userDescription'>
-           <h5 name='nombre'><b>$nombre</b></h5>
-           <p> <b>$usuario</b></p>
-          
-           <p><b>$email</b></p>
-        
-          <a href='{$url}'>Editar</a> 
-
-       </div>
-       <form>
-   </div>
-       
        ";     
 
           }
   
          ?>
+      </div>
 
-        
-           
-       </div>
+
+
     </div>
-</div>
+    </div>
+    </div>
+    
+    
 
-
-  </section>
+      
 
  
-
-
-
-
-
-
-</body>
-</html>

@@ -29,9 +29,8 @@ class plantilla
 			<link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/flag-icon-css/css/flag-icon.min.css') ?>>
 			<link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/selectFX/css/cs-skin-elastic.css') ?>>
 
+			<link rel='stylesheet' type="text/css" href=<?php echo base_url('pagina_inicio/plantilla_principal.css') ?>>
 
-
-			<?php include 'archivocss.php'; ?>
 		</head>
 
 		<body>
