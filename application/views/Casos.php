@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Casos</title>
 </head>
 <body>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>			
                         <div class="form-group">
 						<label>Cedula</label>
-						<input type="text" required placeholder="Cedula" name="cedula" class="form-control">
+						<input type="number" required placeholder="Cedula" name="cedula" class="form-control">
                     </div>	
                     
                     <div class="row">
@@ -340,6 +340,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <?php
 
 if($_POST){
+
     $casos= array('fecha_contagio' => $_POST['fecha_contagio'], 
     'pais' => $_POST['pais'],
     'ciudad' => $_POST['ciudad'],
@@ -349,9 +350,27 @@ if($_POST){
     'nombre' => $_POST['nombre'],
     'apellido' => $_POST['apellido'],
     'fecha_nacimiento' => $_POST['fecha_nacimiento'],
-    'comentario' => $_POST['comentario']);
+	'comentario' => $_POST['comentario']);
+	
 
-  
+	$apiToken = "1010888319:AAEnvd4TG4jFZP_9w7s_HauFYruh8mxNJLI";
+
+	$msg ='Otro caso registrado del coronavirus.
+		
+El infectado ha sido la persona {nombre} {apellido}, perteneciente al pais {pais}, a la ciudad de {ciudad}, el incidente ocurrio el {fecha_contagio}.
+	';
+
+	foreach($_POST as $clave=>$valor){
+		$msg=str_replace("{{$clave}}",$valor,$msg);
+	}
+
+	$data = [
+		'chat_id' => '@Covid19Web',
+		'text' => $msg
+	];
+
+	$response = getSslPage("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
+
     
     $this->RegiCas_model->guardarCasos($casos);
 }

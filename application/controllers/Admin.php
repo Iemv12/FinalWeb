@@ -6,8 +6,9 @@ class Admin extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->helper('datos');
-		// $this->load->model('RegiCas_model');
-		
+		$this->load->helper('urlFunction');
+		$this->load->model('RegiCas_model');	
+
 		if($this->session->userdata('logged_in') !== TRUE) {
 			redirect('Login');
 		}
