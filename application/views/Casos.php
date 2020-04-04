@@ -31,7 +31,6 @@ plantilla_admin::aplicar();
 						</div>	
 						
 						<div class="row">
-<<<<<<< HEAD
 								<div class="col-sm-6 form-group">
 									<label>Pais</label>
 									<select class="form-control select2-container input-lg step2-select col-sm-6" required name="pais" id="pais">
@@ -289,7 +288,6 @@ plantilla_admin::aplicar();
 									<label>Longitud</label>
 									<input type="text" required placeholder="Longitud" name="longitud" class="form-control">
 								</div>
-=======
 							<div class="col-sm-6 form-group">
 								<label>Nombre</label>
 								<input type="text" required name="nombre" placeholder="Nombre" class="form-control">
@@ -548,7 +546,6 @@ plantilla_admin::aplicar();
 									<option value="Zambia" id="ZM">Zambia</option>
 									<option value="Zimbabue" id="ZW">Zimbabue</option>
 								</select>
->>>>>>> 43137080d37d0f3ddd85475f294490813fe5b0da
 							</div>
 							<div class="row">
 								<div class="col-sm-6 form-group">
