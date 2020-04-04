@@ -2,7 +2,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-
+<script src="https://kit.fontawesome.com/140cbedd11.js" crossorigin="anonymous"></script>
 <?php
 
 $CI =& GET_instance();
@@ -79,9 +79,18 @@ if($_POST){
 
         <div class="form-group">
             <label for="exampleInputPassword1">Contrasena</label>
+            <div class="form-row">
+            <div class="col">
             <input value='<?php echo $data->password;?>' type="password" name="password" id="password"    class="form-control" id="exampleInputPassword1" placeholder="Contrasena">
+            </div>
+
+            <div class="col">
+            <button class="btn btn-primary" type="button" onclick="mostrarContrasena()"><i class="far fa-eye"></i></button>
           </div>
-      
+          </div>
+
+          </div>
+      <br>
         <button type="submit" class="btn btn-primary mx-auto d-block">Guardar</button>
 
       </form>
@@ -144,7 +153,17 @@ if($_POST){
 
 
   </section>
-
+  
+  <script>
+  function mostrarContrasena(){
+      var tipo = document.getElementById("password");
+      if(tipo.type == "password"){
+          tipo.type = "text";
+      }else{
+          tipo.type = "password";
+      }
+  }
+</script>
  
 
 

@@ -40,6 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="form-group">
 						<label>Cedula</label>
 						<input type="number" required placeholder="Cedula" name="cedula" class="form-control">
+						<small>Sin guiones</small>
                     </div>	
                     
                     <div class="row">
@@ -358,6 +359,8 @@ if($_POST){
 	$msg ='Otro caso registrado del coronavirus.
 		
 El infectado ha sido la persona {nombre} {apellido}, perteneciente al pais {pais}, a la ciudad de {ciudad}, el incidente ocurrio el {fecha_contagio}.
+
+Le deseamos pronta recuperacion.
 	';
 
 	foreach($_POST as $clave=>$valor){
