@@ -2,7 +2,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-
+<script src="https://kit.fontawesome.com/140cbedd11.js" crossorigin="anonymous"></script>
 <?php
 plantilla_admin::aplicar();
 ?>
@@ -63,12 +63,54 @@ if($_POST){
                       <input type="text" value='<?php echo $data->usuario;?>' name="usuario"  id="usuario" class="form-control" id="exampleInputPassword1" placeholder="Usuario">
                     </div>
 
+<<<<<<< HEAD
                     <div class="form-group">
                         <label for="exampleInputPassword1">Contrasena</label>
                         <input value='<?php echo $data->password;?>' type="password" name="password" id="password"    class="form-control" id="exampleInputPassword1" placeholder="Contrasena">
                       </div>
                   
                     <button type="submit" class="btn btn-primary mx-auto d-block">Guardar</button>
+=======
+  </head>
+<body>
+    
+<div class="container my-5">
+        
+      <h2 class="text-center">Usuarios</h2>
+
+      <form class="form" method="POST" > 
+
+      <input class="from-control" value='<?php echo $data->id;?>' type="hidden" name="id"   >
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Nombre</label>
+          <input type="text" value='<?php echo $data->nombre;?>' name="nombre" id="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre">
+        </div>
+        <div class="form-group ">
+            <label for="exampleInputPassword1">Correo Electronico</label>
+            <input type="text" value='<?php echo $data->email;?>' name="email" id="email" class="form-control" id="exampleInputPassword1" placeholder="Correo Electronico">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Usuario</label>
+          <input type="text" value='<?php echo $data->usuario;?>' name="usuario"  id="usuario" class="form-control" id="exampleInputPassword1" placeholder="Usuario">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Contrasena</label>
+            <div class="form-row">
+            <div class="col">
+            <input value='<?php echo $data->password;?>' type="password" name="password" id="password"    class="form-control" id="exampleInputPassword1" placeholder="Contrasena">
+            </div>
+
+            <div class="col">
+            <button class="btn btn-primary" type="button" onclick="mostrarContrasena()"><i class="far fa-eye"></i></button>
+          </div>
+          </div>
+
+          </div>
+      <br>
+        <button type="submit" class="btn btn-primary mx-auto d-block">Guardar</button>
+>>>>>>> 43137080d37d0f3ddd85475f294490813fe5b0da
 
                   </form>
               </div>  
@@ -106,7 +148,32 @@ if($_POST){
           }
   
          ?>
+<<<<<<< HEAD
       </div>
+=======
+
+        
+           
+       </div>
+    </div>
+</div>
+
+
+  </section>
+  
+  <script>
+  function mostrarContrasena(){
+      var tipo = document.getElementById("password");
+      if(tipo.type == "password"){
+          tipo.type = "text";
+      }else{
+          tipo.type = "password";
+      }
+  }
+</script>
+ 
+
+>>>>>>> 43137080d37d0f3ddd85475f294490813fe5b0da
 
 
 
