@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 <?php
-plantilla_admin::aplicar();
+plantilla_usuario::aplicar();
 ?>
 
 <?php
@@ -94,7 +94,6 @@ if($_POST){
 
                <?php 
 
-
                   
                         $CI =& GET_instance();
 
@@ -109,7 +108,7 @@ if($_POST){
                                 $contenido =  $fila['contenido'];
                                 $imagen =  $fila['imagen'];
 
-                                $url = base_url("index.php/Admin/noticias/{$fila['id']}");
+                                $url = base_url("index.php/Usuario/noticias_user/{$fila['id']}");
               echo "
               <div class='col-sm-4'>
               <p>

@@ -9,7 +9,6 @@ class Admin extends CI_Controller {
 		$this->load->helper('noticias');
 		$this->load->helper('urlFunction');
 		$this->load->model('RegiCas_model');	
-
 		if($this->session->userdata('logged_in') !== TRUE) {
 			redirect('Login');
 		}

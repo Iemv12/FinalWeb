@@ -5,9 +5,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
 <?php
-plantilla_admin::aplicar();
+plantilla_usuario::aplicar();
 ?>
-
         <div class=""> 
            <h1 class="well text-center my-4">Registrar Casos</h1>
 	         <div class="col-lg-12 well">
