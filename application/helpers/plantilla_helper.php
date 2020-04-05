@@ -93,9 +93,10 @@ class plantilla
                 <a class="scroll-link" href="#section-3"><i class="fas fa-user"></i>Estadistica</a>
             </li>
             <li>
-                <a class="scroll-link" href="#section-5"><i class="fas fa-pencil-alt"></i>Subcribete</a>
+                <a href="https://t.me/Covid19Web"><i class="fas fa-pencil-alt"></i>Subcribete</a>
             </li>
             <li>
+
                 <a  href="<?php echo base_url('index.php/Login'); ?>"><i class="fas fa-envelope"></i>Incio de Seccion </a>
             </li>
 

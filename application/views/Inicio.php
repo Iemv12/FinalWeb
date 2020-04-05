@@ -47,7 +47,72 @@ plantilla::aplicar();
                 <canvas id="myChart" width="410" height="120"></canvas>
 			        </div>
 		        </div>
-            
+           
+             <div class="section-6-container section-container section-container-image-bg" id="section-6">
+			        <div class="container">
+			            <div class="row">
+			                <div class="col section-6 section-description wow fadeIn">
+			                    <h2>Contacte con Nosotros</h2>
+			                    <div class="divider-1 wow fadeInUp"><span></span></div>
+			                    <p>Enviar mensaje para cualquier inquietud.</p>
+			                </div>
+			            </div>
+			            <div class="row">
+		                	<div class="col-md-6 section-6-box wow fadeInUp">
+		                		<h3>Enviado Por</h3>
+		                    	<div class="section-6-form">
+		                    		<form role="form" action="assets/contact.php" method="post">
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="contact-email">Email</label>
+				                        	<input type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="contact-subject">Subject</label>
+				                        	<input type="text" name="subject" placeholder="Subject..." class="contact-subject form-control" id="contact-subject">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="contact-message">Message</label>
+				                        	<textarea name="message" placeholder="Message..." class="contact-message form-control" id="contact-message"></textarea>
+				                        </div>
+				                        <button type="submit" class="btn btn-primary btn-customized"><i class="fas fa-paper-plane"></i> Send Message</button>
+				                    </form>
+		                    	</div>
+		                    </div>
+		                    <div class="col-md-5 offset-md-1 section-6-box wow fadeInDown">
+		                    	<h3 class="text-center">Recomendaciones</h3>
+                                <p class="text-center "><ol>
+                                <li >Limpiarse las manos con frecuencia</li>
+                                <li>Evitar el contacto directo</li>
+                                <li>Cubrirse la boca y la nariz con una mascarilla casera de tela al estar rodeados de personas</li>
+                                <li>Cubrirse la boca al toser y estornudar</li>
+                                <li>Limpie y desinfecte</li>
+                                
+                                <ol></p>
+		                    	
+		                    </div>
+			            </div>
+			        </div>
+		        </div>
+		
+		        <!-- Footer -->
+		        <footer class="footer-container">
+		
+			        <div class="container">
+			        	<div class="row">
+		
+		                    <div class="col text-center">
+		                    	&copy; Proyecto realizado por Ivan Matos y Edwal Tejada</a>.
+		                    </div>
+		
+		                </div>
+			        </div>
+		
+		        </footer>
+	        
+	        </div>
+	        <!-- End content -->
+        
+        </div>
                 
 <script>
     async function todoCompleto() {
