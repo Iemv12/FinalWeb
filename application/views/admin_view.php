@@ -81,7 +81,6 @@
                 <div class="col-sm-12">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
                   
-<<<<<<< HEAD
                     <?php 
                      $CI =& GET_instance();
 
@@ -107,9 +106,6 @@
                     </h1> ";
 
                     ?>
-=======
-                    <h1 class="display-4 text-center">Bienvenido Admin. <?php echo $this->session->userdata('usuario');?></h1>
->>>>>>> 2dbb034805513989e5f2f9ee7ae9380d19e24042
                       
                 
                 </div>

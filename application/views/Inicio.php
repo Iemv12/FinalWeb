@@ -1,46 +1,54 @@
 <?php
-
-plantilla::aplicar();
-$CI = &get_instance();
-
+defined('BASEPATH') or exit('No direct script access allowed');
 ?>
-<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-<link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/bootstrap/dist/css/bootstrap.min.css') ?>>
-<link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/font-awesome/css/font-awesome.min.css') ?>>
-<link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/themify-icons/css/themify-icons.css') ?>>
-<link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/flag-icon-css/css/flag-icon.min.css') ?>>
-<link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/selectFX/css/cs-skin-elastic.css') ?>>
-<link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/assets/css/style.css') ?>>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
 
 
-<style>
-    .marker {
-        background-image: url('https://cdn.icon-icons.com/icons2/1283/PNG/512/1497620001-jd22_85165.png');
-        background-size: cover;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-</style>
+<?php
+plantilla::aplicar();
+?>
 
-<div class="container right-panel">
-    <div class="card">
-        <div class="card-header">
-            <h4>Mapa de Casos Registrado</h4>
-        </div>
-        <div class="gmap_unix card-body">
-            <div id='mapa' class="map" style='width: 950px; height: 500px;'></div>
-        </div>
-    </div>
-</div>
+         <!-- Section 1 -->
 
-<canvas id="myChart" width="400" height="400"></canvas>
+        <div class="section-1-container section-container" id="section-1">
+			        
+                    <div class="contenedor mx-auto d-block" style='width: 90% ;'>
 
+                     <div class="row "> 
 
+                    <h2 class="mx-auto d-block my-4">Mapa de Casos Registrado</h2>
+
+                    </div>
+
+                     <hr class="bg-black" />
+
+                    <div class="row"> 
+
+                    <div id='mapa' class="map" style='width: 100%; height: 550px ;'></div>
+             
+                    </div>
+      
+			        </div>
+		</div>
+
+        <div class="section-2-container section-container section-container-gray-bg" id="section-2">
+			        <div class="container">
+			            <div class="row">
+                        <h5 class="text-center mx-auto d-block display-4">Noticias</h5> 
+			            </div>
+			        </div>
+		        </div>
+		
+
+  <!-- Section 3 -->
+  <div class="section-3-container section-container" id="section-3">
+			        <div class="container">
+			    <h5 class="text-center mx-auto d-block display-4">Estadisticas</h5>
+
+                <canvas id="myChart" width="410" height="120"></canvas>
+			        </div>
+		        </div>
+            
+                
 <script>
     async function todoCompleto() {
 
