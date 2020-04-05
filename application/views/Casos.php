@@ -358,7 +358,7 @@ Le deseamos pronta recuperacion.
 		'text' => $msg
 	];
 
-/*	$response = getSslPage("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );*/
+	$response = getSslPage("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
 
     
     $this->RegiCas_model->guardarCasos($casos);

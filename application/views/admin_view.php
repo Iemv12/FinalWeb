@@ -81,7 +81,7 @@
                 <div class="col-sm-12">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
                   
-                    <h1 class="display-4 text-center">ADMIN, <?php echo $this->session->userdata('usuario');?></h1>
+                    <h1 class="display-4 text-center">Bienvenido Admin. <?php echo $this->session->userdata('usuario');?></h1>
                       
                 
                 </div>
