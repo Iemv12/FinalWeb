@@ -18,9 +18,8 @@
 	<link rel='stylesheet' type="text/css" href=<?php echo base_url('login_diseno/vendor/daterangepicker/daterangepicker.css') ?> >
 	<link rel='stylesheet' type="text/css" href=<?php echo base_url('login_diseno/css/util.css') ?> >
 	<link rel='stylesheet' type="text/css" href=<?php echo base_url('login_diseno/css/main.css') ?> >
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<link rel="icon" type="image/png" href=<?php echo base_url('login_diseno/images/icons/favicon.ico') ?> >
+	<link rel="shortcut icon" href=<?php echo base_url('assets/ico/virus.png') ?> >
 
 </head>
 <body>

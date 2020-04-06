@@ -120,16 +120,6 @@ Esperemos que sean noticas buenas.
   $rs = $CI->db->query("Select * from noticias")->result_array();
 
 
-<<<<<<< HEAD
-                                $url = base_url("index.php/Admin/noticias/{$fila['id']}");
-              echo "
-              <div class='col-sm-4'>
-              <p>
-              $titulo
-              $fecha
-              $resumen
-              $contenido
-=======
   foreach ($rs as $fila) {
 
     $titulo =  $fila['titulo'];
@@ -158,23 +148,13 @@ Esperemos que sean noticas buenas.
                   <a href='{$url}'>Editar</a> 
                 </div>
                 <form>
->>>>>>> 2dbb034805513989e5f2f9ee7ae9380d19e24042
               </div>
             
               ";    
        
-
-<<<<<<< HEAD
-           
                         }
             ?>
                 </section>
-=======
-            ";
-  }
-  ?>
-</section>
->>>>>>> 2dbb034805513989e5f2f9ee7ae9380d19e24042
 
 </div>
 </div>

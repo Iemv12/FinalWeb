@@ -14,6 +14,7 @@
     <link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/assets/css/style.css') ?> >
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href=<?php echo base_url('assets/ico/virus.png') ?> >
 
 
 </head>
@@ -27,10 +28,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
               
-                <a class="navbar-brand" href=" <?php echo base_url('index.php/usuario'); ?>"><img src="images/logo.png" alt="Logo"></a>
-                <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
-
-            </div>
+               
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
@@ -47,16 +45,6 @@
                     </li>
                     <li class="">
                         <a href="<?php echo base_url('index.php/Usuario/noticias_user');?>"> <i class="menu-icon fa fa-plus"></i>Agregar noticias</a>
-                    </li>
-                    <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>link</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="link">link</a></li>
-                            <li><i class="fa fa-puzzle-piece"></i><a href="link">link</a></li>
-                            <li><i class="fa fa-puzzle-piece"></i><a href="link">link</a></li>
-                            <li><i class="fa fa-puzzle-piece"></i><a href="link">link</a></li>
-                            <li><i class="fa fa-puzzle-piece"></i><a href="link">link</a></li>
-                        </ul>
                     </li>
                 
                     <li class="">
@@ -78,37 +66,6 @@
                 <div class="col-sm-12">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
                   
-                    <?php 
-                     $CI =& GET_instance();
-
-                       $usuario =  $this->session->userdata('usuario');
-
-                       $rs=$CI->db->query("Select * from users_tbl where usuario = '$usuario' " )->result_array();
-
- 
-                       foreach($rs as $fila){
-
-                        $nombre=  $fila['nombre'];
-                        $usuario=  $fila['usuario'];
-                         $foto=  $fila['foto'];
-                         $email=  $fila['email'];
-                      
-                      $imagen = base_url($foto);
-                      
-                        }
-
-                    echo "  <h1 class='display-4 text-center'>
-
-                    Usuario, 
-                    
-                       <p> $nombre</p>
-                       <p> $usuario</p>
-                       <p> $email</p>
-                       <img src='$imagen' />
-                    </h1> ";
-
-                    ?>
-                      
                 
                 </div>
             </div>

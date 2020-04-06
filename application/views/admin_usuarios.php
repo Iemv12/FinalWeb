@@ -17,14 +17,6 @@ $data->id = $id;
 
 if($_POST){
 
-        $nombrefoto = $_FILES['foto']['name'];
-        $archivos = $_FILES['foto']['tmp_name'];
-        $ruta="imagenesusuarios";
-        $ruta=$ruta."/".$nombrefoto;
-
-        move_uploaded_file($archivos, $ruta);
-        
-        var_dump($ruta);
 
         foreach($data as $prop => $val){
 
@@ -36,7 +28,7 @@ if($_POST){
           $CI->db->update('users_tbl',$data);
 
         }else{
-          $CI->db->query("insert into `users_tbl` (nombre,usuario,email,password,rol,foto) VALUES ('$data->nombre','$data->usuario','$data->email','$data->password','2','$ruta')" );
+          $CI->db->query("insert into `users_tbl` (nombre,usuario,email,password,rol) VALUES ('$data->nombre','$data->usuario','$data->email','$data->password','2')" );
         }
     }
     else if($id > 0){
@@ -74,22 +66,13 @@ if($_POST){
                         <label for="exampleInputPassword1">Contrasena</label>
                         <input value='<?php echo $data->password;?>' type="password" name="password" id="password"    class="form-control" id="exampleInputPassword1" placeholder="Contrasena">
                       </div>
-                      <div class="form-group">
-                        <label for="exampleInputPassword1">Foto</label>
-                       
-                        <input type="file" name="foto" required >    
-
-                                   </div>
-  
 
                     <button type="submit" class="btn btn-primary mx-auto d-block">Guardar</button>
 
                   </form>
               </div>  
 
-
   <div>
- 
 <?php  
        
        $CI =& GET_instance();

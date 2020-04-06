@@ -30,6 +30,7 @@ class plantilla_admin
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/card.css') ?> >
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+	<link rel="shortcut icon" href=<?php echo base_url('assets/ico/virus.png') ?> >
 
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
@@ -75,16 +76,7 @@ class plantilla_admin
                     <li class="">
                         <a href="<?php echo base_url('index.php/Admin/noticias');?>"> <i class="menu-icon fa fa-plus"></i>Agregar noticias</a>
                     </li>
-                    <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>link</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="link">link</a></li>
-                            <li><i class="fa fa-puzzle-piece"></i><a href="link">link</a></li>
-                            <li><i class="fa fa-puzzle-piece"></i><a href="link">link</a></li>
-                            <li><i class="fa fa-puzzle-piece"></i><a href="link">link</a></li>
-                            <li><i class="fa fa-puzzle-piece"></i><a href="link">link</a></li>
-                        </ul>
-                    </li>
+                 
                 
                     <li class="">
                         <a href="<?php echo site_url('Login/logout');?>"> <i class="menu-icon fa fa-plus"></i>Cerrar session</a>

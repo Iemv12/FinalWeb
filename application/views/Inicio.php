@@ -34,6 +34,8 @@ plantilla::aplicar();
 			        <div class="container">
 			            <div class="row">
                         <h5 class="text-center mx-auto d-block display-4">Noticias</h5> 
+
+                        
 			            </div>
 			        </div>
 		        </div>

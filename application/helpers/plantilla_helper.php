@@ -22,6 +22,7 @@ class plantilla
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+	<link rel="shortcut icon" href=<?php echo base_url('assets/ico/virus.png') ?> >
 
           <!-- CSS -->
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
@@ -35,7 +36,7 @@ class plantilla
 
         <!-- Favicon and touch icons -->
 
-        <link rel="shortcut icon" href=<?php echo base_url('assets/ico/favicon.png') ?> >
+        <link rel="shortcut icon" href=<?php echo base_url('assets/ico/virus.png') ?> >
         <link rel="apple-touch-icon-precomposed" sizes="144x144"  href=<?php echo base_url('assets/ico/apple-touch-icon-144-precomposed.png') ?> >
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href=<?php echo base_url('assets/ico/apple-touch-icon-114-precomposed.png') ?> >
         <link rel="apple-touch-icon-precomposed"  sizes="72x72" href=<?php echo base_url('assets/ico/apple-touch-icon-72-precomposed.png') ?> >
@@ -84,10 +85,10 @@ class plantilla
         
         <ul class="list-unstyled menu-elements">
             <li class="active">
-                <a class="scroll-link" href="#section-1"><i class="fas fa-home"></i>Mapa</a>
+                <a class="scroll-link" href="#section-1"><i class="far fa-map"></i>Mapa</a>
             </li>
             <li>
-                <a class="scroll-link" href="#section-2"><i class="fas fa-cog"></i>Noticias</a>
+                <a class="scroll-link" href="#section-2"><i class="far fa-newspaper"></i>Noticias</a>
             </li>
             <li>
                 <a class="scroll-link" href="#section-3"><i class="fas fa-user"></i>Estadistica</a>
