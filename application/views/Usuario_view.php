@@ -18,6 +18,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" href=<?php echo base_url('assets/ico/virus.png') ?> >
     <style>
+
         .marker {
             background-image: url('https://cdn.icon-icons.com/icons2/1283/PNG/512/1497620001-jd22_85165.png');
             background-size: cover;
@@ -26,6 +27,7 @@
             border-radius: 50%;
             cursor: pointer;
         }
+        
     </style>
 
 </head>
