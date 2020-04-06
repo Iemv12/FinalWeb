@@ -74,7 +74,7 @@ if($_POST){
 					echo "  <h1 class='display-4 text-center'>
 					<div class='row'>
 					<div class='col-sm-12'>
-					<img src='$img'  class='rounded-circle' alt='foto'> 
+					<img src='$img'  class='rounded-circle' alt='foto' style='height:185px; width:150px;'> 
 					<h4 class='display-5 text-center'>Administrador $nombre</h4>
 					
 					</div>
@@ -182,7 +182,7 @@ if($_POST){
            <td>$nombre</td>
            <td>$usuario</td>
            <td>$email</td>
-           <td> <img src='$img' class='rounded-circle' alt='foto'> </td>
+           <td> <img src='$img' class='rounded-circle' alt='foto' style='height:105px; width:85;'> </td>
            <td><a class='btn btn-warning' href='{$url}'>Editar</a></td>
       </tr>
        ";     

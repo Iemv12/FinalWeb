@@ -59,7 +59,7 @@ class plantilla_usuario
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="<?php echo base_url('index.php/Usuario'); ?>"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                        <a href="<?php echo base_url('index.php/Usuario'); ?>"> <i class="menu-icon fa fa-home"></i>Inicio </a>
                     </li>
                   
                  
@@ -100,6 +100,7 @@ function __destruct()
             
         (function($) {
             "use strict";
+            
 
             jQuery('#vmap').vectorMap({
                 map: 'world_en',

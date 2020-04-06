@@ -99,7 +99,7 @@ Esperemos que sean noticas buenas.
 					echo "  <h1 class='display-4 text-center'>
 					<div class='row'>
 					<div class='col-sm-12'>
-					<img src='$img' class='rounded-circle' alt='foto'> 
+					<img src='$img' class='rounded-circle' alt='foto' style='height:185px; width:150px;'> 
 					<h4 class='display-5 text-center'>Administrador $nombre</h4>
 					
 					</div>

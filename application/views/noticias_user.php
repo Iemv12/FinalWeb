@@ -81,7 +81,7 @@ if($_POST){
 						echo "  <h1 class='display-4 text-center'>
 						<div class='row'>
 						<div class='col-sm-12'>
-						<img src='$img' class='rounded-circle' alt='Cinque Terre'> 
+						<img src='$img' class='rounded-circle' alt='Cinque Terre' style='height:185px; width:150px;'> 
 						<h4 class='display-5 text-center'>Usuario $nombre</h4>
 						
 						</div>

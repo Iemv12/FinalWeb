@@ -59,7 +59,7 @@ class plantilla_admin
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="<?php echo base_url('index.php/Admin'); ?>"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    <a  href="<?php echo base_url('index.php/Admin'); ?>"> <i class="menu-icon fa fa-home"></i>Inicio </a>
                     </li>
                   
                     <li class="active">

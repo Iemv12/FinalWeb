@@ -213,7 +213,7 @@ plantilla::aplicar();
 
         var map = new mapboxgl.Map({
             container: 'mapa',
-            center: [-69.786324, 18.963442],
+            center: [-70.786324, 18.963442],
             style: 'mapbox://styles/mapbox/streets-v11',
             zoom: 6
         });

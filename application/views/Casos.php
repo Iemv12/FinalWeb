@@ -35,7 +35,7 @@ plantilla_admin::aplicar();
 					echo "  <h1 class='display-4 text-center'>
 					<div class='row'>
 					<div class='col-sm-12'>
-					<img src='$img' class='rounded-circle' alt='foto'> 
+					<img src='$img' class='rounded-circle' alt='foto' style='height:185px; width:150px;'> 
 					<h4 class='display-5 text-center'>Administrador $nombre</h4>
 					
 					</div>
@@ -55,7 +55,7 @@ plantilla_admin::aplicar();
            <h1 class="well text-center my-4">Registrar Casos</h1>
 	         <div class="col-lg-12 well">
 	         	<div class="row">
-					<form class="mx-auto d-block" style="width; 70%" method="POST">
+					<form class="mx-auto d-block" style="width: 70%;" method="POST">
 						<div class="col-sm-12">
 							<div class="row">
 								<div class="col-sm-6 form-group">
