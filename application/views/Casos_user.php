@@ -370,7 +370,7 @@ plantilla_usuario::aplicar();
 		$nombre=  $fila['nombre'];
 		$apellido=  $fila['apellido'];
 		$cedula=  $fila['cedula'];
-        $Pais=  $fila['Pais'];
+        $pais=  $fila['pais'];
         $fecha_contagio=  $fila['fecha_contagio'];
    
        echo " 

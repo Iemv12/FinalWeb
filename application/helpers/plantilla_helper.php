@@ -67,7 +67,6 @@ class plantilla
 
 <body>
 
-<body>
 
 <!-- Wrapper -->
 <div class="wrapper">
