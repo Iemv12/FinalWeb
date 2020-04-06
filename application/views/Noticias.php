@@ -58,7 +58,7 @@ Esperemos que sean noticas buenas.
       'text' => $msg
     ];
 
-    $response = getSslPage("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data));
+  //  $response = getSslPage("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data));
     //telegram
   }
 } else if ($id > 0) {
@@ -73,55 +73,62 @@ Esperemos que sean noticas buenas.
 ?>
 
 
+
 <div class="content mt-3 ">
+        
+      <h2 class="text-center">Noticias</h2>
 
-  <h2 class="text-center">Noticias</h2>
+      <form class="form" method="POST" enctype="multipart/form-data"> 
 
-  <form class="form" method="POST" enctype="multipart/form-data">
-
-    <input class="from-control" value='<?php echo $noticias->id; ?>' type="hidden" name="id">
+      <input class="from-control" value='<?php echo $noticias->id;?>' type="hidden"  name="id"   >
 
 
-    <div class="form-group">
-      <label for="exampleInputEmail1">Titulo</label>
-      <input type="text" value='<?php echo $noticias->titulo; ?>' name="titulo" id="titulo" class="form-control" required aria-describedby="emailHelp" placeholder="Titulo">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Titulo</label>
+          <input type="text" value='<?php echo $noticias->titulo;?>' name="titulo" id="titulo" class="form-control"  required aria-describedby="emailHelp" placeholder="Titulo">
+        </div>
+        
+        <div class="form-group">
+          <label for="exampleInputPassword1">Fecha</label>
+          <input type="date" value='<?php echo $noticias->fecha;?>'  name="fecha"  id="fecha" class="form-control"  placeholder="Fecha" required>
+        </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Resumen</label>
+            <textarea value='<?php echo $noticias->resumen;?>' class="form-control" name="resumen" id="resumen" rows="3" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Contenido</label>
+            <textarea value='<?php echo $noticias->contenido;?>' class="form-control" name="contenido" required id="contenido" rows="3"></textarea>
+          </div>
+
+          <input type="file" name="imagen" required >
+   
+        <button type="submit" class="btn btn-primary mx-auto d-block">Agregar</button>
+
+      </form>
     </div>
 
-    <div class="form-group">
-      <label for="exampleInputPassword1">Fecha</label>
-      <input type="date" value='<?php echo $noticias->fecha; ?>' name="fecha" id="fecha" class="form-control" placeholder="Fecha" required>
-    </div>
+                <section class="container">
 
-    <div class="form-group">
-      <label for="exampleFormControlTextarea1">Resumen</label>
-      <textarea value='<?php echo $noticias->resumen; ?>' class="form-control" name="resumen" id="resumen" rows="3" required></textarea>
-    </div>
+               <?php 
 
-    <div class="form-group">
-      <label for="exampleFormControlTextarea1">Contenido</label>
-      <textarea value='<?php echo $noticias->contenido; ?>' class="form-control" name="contenido" required id="contenido" rows="3"></textarea>
-    </div>
+                  
+                        $CI =& GET_instance();
 
-    <input type="file" name="imagen" required>
-
-    <button type="submit" class="btn btn-primary mx-auto d-block">Agregar</button>
-
-  </form>
-</div>
-
-<section class="container">
-
-  <?php
+                        $rs=$CI->db->query("Select * from noticias" )->result_array();
 
 
+                        foreach($rs as $fila){
 
-  $CI = &GET_instance();
+                                $titulo =  $fila['titulo'];
+                                $fecha=  $fila['fecha'];
+                                $resumen=  $fila['resumen'];
+                                $contenido =  $fila['contenido'];
+                                $imagen =  $fila['imagen'];
 
-  $rs = $CI->db->query("Select * from noticias")->result_array();
-
-
-<<<<<<< HEAD
-                                $url = base_url("index.php/Admin/noticias/{$fila['id']}");
+                                $url = base_url("index.php/Usuario/noticias_user/{$fila['id']}");
               echo "
               <div class='col-sm-4'>
               <p>
@@ -129,52 +136,15 @@ Esperemos que sean noticas buenas.
               $fecha
               $resumen
               $contenido
-=======
-  foreach ($rs as $fila) {
-
-    $titulo =  $fila['titulo'];
-    $fecha =  $fila['fecha'];
-    $resumen =  $fila['resumen'];
-    $contenido =  $fila['contenido'];
-    $imagen =  $fila['imagen'];
-
-    $url = base_url("index.php/Admin/noticias/{$fila['id']}");
-    $img = base_url($imagen);
-    echo "
-
-              <div class='card mb-3' style='max-width: 540px;'>
-              <div class='row no-gutters'>
-                <div class='col-md-4'>
-                <form class='form' method='POST' >
-                  <img src='$img' class='card-img' alt='...'>
-                </div>
-                <div class='col-md-8'>
-                  <div class='card-body'>
-                    <h5 class='card-title'>'$titulo'</h5>
-                    <p>$fecha</p>
-                    <p class='card-text'>$resumen</p>
-                    <p class='card-text'>$contenido</p>
-                  </div>
-                  <a href='{$url}'>Editar</a> 
-                </div>
-                <form>
->>>>>>> 2dbb034805513989e5f2f9ee7ae9380d19e24042
               </div>
             
               ";    
        
 
-<<<<<<< HEAD
            
                         }
             ?>
                 </section>
-=======
-            ";
-  }
-  ?>
-</section>
->>>>>>> 2dbb034805513989e5f2f9ee7ae9380d19e24042
 
-</div>
-</div>
+    </div> 
+    </div>

@@ -27,11 +27,12 @@ class plantilla
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-      
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link rel='stylesheet' type="text/css" href=<?php echo base_url('assets/css/jquery.mCustomScrollbar.min.css') ?> >
         <link rel='stylesheet' type="text/css" href=<?php echo base_url('assets/css/css/animate.css') ?> >
         <link rel='stylesheet' type="text/css" href=<?php echo base_url('assets/css/style.css') ?> >
         <link rel='stylesheet' type="text/css" href=<?php echo base_url('assets/css/media-queries.css') ?> >
+        <link rel='stylesheet' type="text/css" href=<?php echo base_url('noticiaDesign/noticias.css') ?> >
 
         <!-- Favicon and touch icons -->
 
@@ -79,24 +80,24 @@ class plantilla
         </div>
         
         <div class="logo">
-            <h3><a href="index.html">Nombre de la pagina web</a></h3>
+            <h3><a href="<?php base_url(); ?>">Covid</a></h3>
         </div>
         
         <ul class="list-unstyled menu-elements">
             <li class="active">
-                <a class="scroll-link" href="#section-1"><i class="fas fa-home"></i>Mapa</a>
+                <a class="scroll-link" href="#section-1"><i class="fas fa-map"></i>Mapa</a>
             </li>
             <li>
-                <a class="scroll-link" href="#section-2"><i class="fas fa-cog"></i>Noticias</a>
+                <a class="scroll-link" href="#section-2"><i class="far fa-newspaper"></i></i>Noticias</a>
             </li>
             <li>
-                <a class="scroll-link" href="#section-3"><i class="fas fa-user"></i>Estadistica</a>
+                <a class="scroll-link" href="#section-3"><i class="fas fa-chart-bar"></i>Estadistica</a>
             </li>
             <li>
-                <a class="scroll-link" href="#section-5"><i class="fas fa-pencil-alt"></i>Subcribete</a>
+                <a href="https://t.me/Covid19Web"><i class="fa fa-telegram"></i>Subcribete a Telegram</a>
             </li>
             <li>
-                <a  href="<?php echo base_url('index.php/Login'); ?>"><i class="fas fa-envelope"></i>Incio de Seccion </a>
+                <a  href="<?php echo base_url('index.php/Login'); ?>"><i class="fas fa-sign-in-alt"></i>Incio de Seccion </a>
             </li>
 
            
@@ -132,10 +133,10 @@ class plantilla
             <div class="container">
                 <div class="row">
                     <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                        <h1 class="wow fadeIn text-center"><strong>Corona Virus</strong></h1>
+                        <h1 class="wow fadeIn text-center"><strong>Coronavirus</strong></h1>
                         <div class="description wow fadeInLeft text-center">
                             <p class="bg-ligh wow fadeIn">
-                            <strong>  La COVID-19 es la enfermedad infecciosa causada por el coronavirus que se ha descubierto más recientemente. Tanto el nuevo virus como la enfermedad eran desconocidos antes de que estallara el brote en Wuhan (China) en diciembre de 2019.
+                            <strong>  El COVID-19 es la enfermedad infecciosa causada por el coronavirus que se ha descubierto más recientemente. Tanto el nuevo virus como la enfermedad eran desconocidos antes de que estallara el brote en Wuhan (China) en diciembre de 2019.
                             </strong>
                             </p>
                         </div>
