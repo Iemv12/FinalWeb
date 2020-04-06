@@ -90,19 +90,18 @@ if($_POST){
 <!-- Header-->
 
 
-<div id="content" class="p-4 p-md-5 pt-5">
+ <div id="content" class="p-4 p-md-5 pt-5">
 
                <h2 class="text-center">Usuarios</h2>
                
-           
-                  <form class="form " method="POST" enctype="multipart/form-data">  
+                  <form class="form ml-5 " style="width:80%;" method="POST"  enctype="multipart/form-data">  
 
                   <input class="from-control" value='<?php echo $data->id;?>' type="hidden" name="id"   >
 
                   <div class="row"> 
                   <div class="col-sm-12"> 
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Nombre</label>
+                      <label for="exampleInputEmail1"><Strong>Nombre</Strong></label>
                       <input type="text" value='<?php echo $data->nombre;?>' name="nombre" id="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre" required>
                     </div>
                     </div>
@@ -111,7 +110,7 @@ if($_POST){
                     <div class="row "> 
                       <div class="col-sm-12"> 
                       <div class="form-group">
-                        <label for="exampleInputPassword1">Correo Electronico</label>
+                        <label for="exampleInputPassword1"><Strong>Correo Electronico</Strong></label>
                         <input type="email" value='<?php echo $data->email;?>' name="email" id="email" class="form-control" id="exampleInputPassword1" placeholder="Correo Electronico" required>
                      </div>
                     </div>
@@ -120,7 +119,7 @@ if($_POST){
                     <div class="row "> 
                       <div class="col-sm-12"> 
                       <div class="form-group">
-                      <label for="exampleInputPassword1">Usuario</label>
+                      <label for="exampleInputPassword1"><Strong>Usuario</Strong></label>
                       <input type="text" value='<?php echo $data->usuario;?>' name="usuario"  id="usuario" class="form-control" id="exampleInputPassword1" placeholder="Usuario" required>
                       </div>
                     </div>
@@ -130,14 +129,14 @@ if($_POST){
                     <div class="row "> 
                       <div class="col-sm-12"> 
                       <div class="form-group">
-                        <label for="exampleInputPassword1">Contrasena</label>
+                        <label for="exampleInputPassword1"><Strong>contraseña</Strong></label>
                         <input value='<?php echo $data->password;?>' type="password" name="password" id="password"    class="form-control" id="exampleInputPassword1" placeholder="Contrasena" required>
                       </div>
 
                       <div class="row "> 
                       <div class="col-sm-12"> 
                       <div class="form-group">
-                        <label for="exampleInputPassword1">Foto</label>
+                        <label for="exampleInputPassword1"><Strong>Foto</Strong></label>
                         <input value='<?php echo $data->foto;?>' type="file" name="foto" id="foto " required>
                        
                       </div>
@@ -149,6 +148,8 @@ if($_POST){
                   </form>
            
               </div>  
+              </div>  
+
               <table class='table table-hover my-5 border table-striped'>
        <thead class='thead-dark'>
          <tr>
@@ -186,7 +187,6 @@ if($_POST){
       </tr>
        ";     
   
-
           }
   
          ?>

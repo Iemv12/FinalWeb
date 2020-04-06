@@ -52,51 +52,32 @@ plantilla_usuario::aplicar();
 </header><!-- /header -->
 <!-- Header-->
 
-<div class="breadcrumbs">
-    <div class="col-sm-4">
-        <div class="page-header float-left">
-            <div class="page-title">
-                <h1>Dashboard</h1>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-8">
-        <div class="page-header float-right">
-            <div class="page-title">
-                <ol class="breadcrumb text-right">
-                    <li class="active">Dashboard</li>
-                </ol>
-            </div>
-        </div>
-    </div>
-</div>
-
  <div id="content" class="p-4 p-md-5 pt-5">
 
         <div class=""> 
-           <h1 class="well text-center my-4">Registrar Casos</h1>
+           <h1 class="well text-center my-2">Registrar Casos</h1>
 	         <div class="col-lg-12 well">
 	         	<div class="row">
-					<form class="mx-auto d-block" method="POST">
+					<form class="mx-auto d-block " style="width; 70%" method="POST">
 						<div class="col-sm-12">
 							<div class="row">
 								<div class="col-sm-6 form-group">
-									<label>Nombre</label>
+									<label><strong>Nombre</strong></label>
 									<input type="text" required name="nombre" placeholder="Nombre" class="form-control">
 								</div>
 								<div class="col-sm-6 form-group">
-									<label>Apellido</label>
+									<label><strong>Apellido</strong></label>
 									<input type="text" required name="apellido" placeholder="Apellido" class="form-control">
 								</div>
 							</div>			
 							<div class="form-group">
-							<label>Cedula</label>
+							<label><strong>Cedula</strong></label>
 							<input type="text" required placeholder="Cedula" name="cedula" class="form-control">
 						</div>	
 						
 						<div class="row">
 								<div class="col-sm-6 form-group">
-									<label>Pais</label>
+									<label><strong>Pais</strong></label>
 									<select class="form-control select2-container input-lg step2-select col-sm-6" required name="pais" id="pais">
 										<option value=""></option>
 										<option value="Afganistán" id="AF">Afganistán</option>
@@ -339,38 +320,27 @@ plantilla_usuario::aplicar();
 									</select>
 								</div>
 								<div class="col-sm-6 form-group">
-									<label>Ciudad</label>
+									<label><strong>Ciudad</strong></label>
 									<input type="text" required placeholder="Ciudad" name="ciudad" class="form-control">
 								</div>
 							</div>	
 							<div class="row">
 								<div class="col-sm-6 form-group">
-									<label>Latitud</label>
+									<label><strong>Latitud</strong></label>
 									<input type="text" required placeholder="Latitud" name="latitud" class="form-control">
 								</div>
 								<div class="col-sm-6 form-group">
-									<label>Longitud</label>
+									<label><strong>Longitud</strong></label>
 									<input type="text" required placeholder="Longitud" name="longitud" class="form-control">
 								</div>
-							<div class="col-sm-6 form-group">
-								<label>Nombre</label>
-								<input type="text" required name="nombre" placeholder="Nombre" class="form-control">
-							</div>
-							<div class="col-sm-6 form-group">
-								<label>Apellido</label>
-								<input type="text" required name="apellido" placeholder="Apellido" class="form-control">
-							</div>
+						
                         </div>			
-                        <div class="form-group">
-						<label>Cedula</label>
-						<input type="number" required placeholder="Cedula" name="cedula" class="form-control">
-						<small>Sin guiones</small>
-                    </div>	
+                    
                     
                     <div class="row">
 							<div class="col-sm-6 form-group">
 								<label>Pais</label>
-								<select class="form-control select2-container input-lg step2-select col-sm-6" required name="pais" id="pais">
+								<select class="form-control select2-container input-lg step2-select col-sm-9" required name="pais" id="pais">
 									<option value=""></option>
 									<option value="Afganistán" id="AF">Afganistán</option>
 									<option value="Albania" id="AL">Albania</option>
@@ -611,7 +581,7 @@ plantilla_usuario::aplicar();
 									<option value="Zimbabue" id="ZW">Zimbabue</option>
 								</select>
 							</div>
-							<div class="row">
+					
 								<div class="col-sm-6 form-group">
 									<label>Fecha Nacimiento</label>
 									<input type="date" required placeholder="Fecha Nacimiento" name="fecha_nacimiento" class="form-control">
@@ -627,14 +597,54 @@ plantilla_usuario::aplicar();
 								<small>Maximo 1000 caracter</small>
 							</div>
 							<div class="text-right">
-						<button type="submit" class="btn btn-lg btn-info">Registrar</button>
-						<a href="<?php echo base_url('index.php/Admin')?>" class="btn btn-lg btn-warning">Atras</a>
+						<button type="submit" class="btn btn-primary my-4 mx-auto d-block">Registrar</button>
 						</div>							
 						</div>
 					</form> 
 					</div>
 			</div>
 	</div>
+
+	<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr class="text-center">
+      <th scope="col">Nombre</th>
+      <th scope="col">Cedula</th>
+      <th scope="col">Pais</th>
+      <th scope="col">Fecha de contagio</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php  
+       
+       $CI =& GET_instance();
+
+       $rs=$CI->db->query("Select * from casos" )->result_array();
+       
+       foreach($rs as $fila){
+
+		$nombre=  $fila['nombre'];
+		$apellido=  $fila['apellido'];
+		$cedula=  $fila['cedula'];
+        $Pais=  $fila['Pais'];
+        $fecha_contagio=  $fila['fecha_contagio'];
+   
+       echo " 
+       <tr class='text-center'>
+           <td>$nombre $apellido</td>
+           <td>$cedula</td>
+           <td>$fecha_contagio</td>
+      </tr>
+       ";     
+  
+          }
+  
+         ?>
+
+  </tbody>
+</table>
+
+</div>
 
 
 <script>

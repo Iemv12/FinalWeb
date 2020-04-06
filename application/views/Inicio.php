@@ -55,9 +55,9 @@ plantilla::aplicar();
                     $img = base_url($imagen);
                     $pagina = base_url()."index.php/ControladorPrincipal/noticia_completa?id={$fila['id']}";
 
-                echo "<div class='col-xs-12 col-md-6 col-lg-3'>
-        <div class='card'>
-        <img class='card-img-top' src='$img' alt='Card image cap'>
+                echo "<div  class='col-xs-12  col-md-6 col-lg-3'>
+        <div class='card' style='width: 330px;'>
+        <img class='card-img-top' style='height: 250px;' src='$img' alt='Card image cap'>
         <div class='card-block'>
             <h4 class='card-title'>$titulo</h4>
             <p class='card-text'>$resumen</p>
@@ -109,7 +109,7 @@ plantilla::aplicar();
 		                	<div class="col-md-6 section-6-box wow fadeInUp">
 		                		<h3>Enviado Por</h3>
 		                    	<div class="section-6-form">
-		                    		<form role="form" action="assets/contact.php" method="post">
+		                    		<form role="form" method="post">
 				                    	<div class="form-group">
 				                    		<label class="sr-only" for="contact-email">Email</label>
 				                        	<input type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">

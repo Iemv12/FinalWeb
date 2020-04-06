@@ -55,7 +55,7 @@ plantilla_admin::aplicar();
            <h1 class="well text-center my-4">Registrar Casos</h1>
 	         <div class="col-lg-12 well">
 	         	<div class="row">
-					<form class="mx-auto d-block" method="POST">
+					<form class="mx-auto d-block" style="width; 70%" method="POST">
 						<div class="col-sm-12">
 							<div class="row">
 								<div class="col-sm-6 form-group">
@@ -75,7 +75,7 @@ plantilla_admin::aplicar();
 						<div class="row">
 								<div class="col-sm-6 form-group">
 									<label>Pais</label>
-									<select class="form-control select2-container input-lg step2-select col-sm-6" required name="pais" id="pais">
+									<select class="form-control select2-container input-lg step2-select col-sm-9" required name="pais" id="pais">
 										<option value=""></option>
 										<option value="Afganistán" id="AF">Afganistán</option>
 										<option value="Albania" id="AL">Albania</option>
@@ -347,13 +347,53 @@ plantilla_admin::aplicar();
 								<small>Maximo 1000 caracter</small>
 							</div>
 							<div class="text-right">
-						<button type="submit" class="btn btn-lg btn-info">Registrar</button>
-						<a href="<?php echo base_url('index.php/Admin')?>" class="btn btn-lg btn-warning">Atras</a>
+						<button type="submit" class="btn btn-primary mx-auto d-block mb-5">Registrar</button>
 						</div>							
 						</div>
 					</form> 
 					</div>
 			</div>
+
+			<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr class="text-center">
+      <th scope="col">Nombre</th>
+      <th scope="col">Cedula</th>
+      <th scope="col">Pais</th>
+      <th scope="col">Fecha de contagio</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php  
+       
+       $CI =& GET_instance();
+
+       $rs=$CI->db->query("Select * from casos" )->result_array();
+       
+       foreach($rs as $fila){
+
+		$nombre=  $fila['nombre'];
+		$apellido=  $fila['apellido'];
+		$cedula=  $fila['cedula'];
+        $Pais=  $fila['Pais'];
+        $fecha_contagio=  $fila['fecha_contagio'];
+   
+       echo " 
+       <tr class='text-center'>
+           <td>$nombre $apellido</td>
+           <td>$cedula</td>
+           <td>$fecha_contagio</td>
+      </tr>
+       ";     
+  
+          }
+  
+         ?>
+
+  </tbody>
+</table>
+
+
 	</div>
 
 

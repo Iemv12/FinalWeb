@@ -22,7 +22,7 @@ if($_POST){
 
             $nombreImg = $_FILES['imagen']['name'];
             $archivo = $_FILES['imagen']['tmp_name'];
-            $ruta="img";
+            $ruta="noticias";
             $ruta=$ruta."/".$nombreImg;
 
             move_uploaded_file($archivo, $ruta);
@@ -97,24 +97,6 @@ if($_POST){
 </header><!-- /header -->
 <!-- Header-->
 
-<div class="breadcrumbs">
-    <div class="col-sm-4">
-        <div class="page-header float-left">
-            <div class="page-title">
-                <h1>Dashboard</h1>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-8">
-        <div class="page-header float-right">
-            <div class="page-title">
-                <ol class="breadcrumb text-right">
-                    <li class="active">Dashboard</li>
-                </ol>
-            </div>
-        </div>
-    </div>
-</div>
 
  <div id="content" class="p-4 p-md-5 pt-5">
 
@@ -154,11 +136,20 @@ if($_POST){
 
       </form>
     </div>
-
-                <section class="container">
-
+    <section class="container">
+                <table class="table table-hover table-striped mb-5">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Titulo</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Resumen</th>
+      <th scope="col">Contenido</th>
+      <th scope="col">Editar</th>
+    </tr>
+  </thead>
+  <tbody>
+    
                <?php 
-
                   
                         $CI =& GET_instance();
 
@@ -173,22 +164,27 @@ if($_POST){
                                 $contenido =  $fila['contenido'];
                                 $imagen =  $fila['imagen'];
 
-                                $url = base_url("index.php/Usuario/noticias_user/{$fila['id']}");
+                                
+             $url = base_url("index.php/Usuario/noticias_user/{$fila['id']}");
               echo "
               <div class='col-sm-4'>
               <p>
-              $titulo
-              $fecha
-              $resumen
-              $contenido
+              <tr>
+                <td>$titulo</td>
+                <td>$fecha</td>
+                <td>$resumen</td>
+                <td>$contenido</td>
+                <td><a class='btn btn-warning' href='{$url }'>Editar</a></td>
+              </tr>
               </div>
             
               ";    
-       
-
-           
                         }
             ?>
+
+</tbody>
+</table>
+
                 </section>
 
     </div> 

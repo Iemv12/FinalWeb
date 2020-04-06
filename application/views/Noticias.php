@@ -22,7 +22,7 @@ if ($_POST) {
 
   $nombreImg = $_FILES['imagen']['name'];
   $archivo = $_FILES['imagen']['tmp_name'];
-  $ruta = "img";
+  $ruta = "noticias";
   $ruta = $ruta . "/" . $nombreImg;
 
   move_uploaded_file($archivo, $ruta);
@@ -120,42 +120,53 @@ Esperemos que sean noticas buenas.
         
       <h2 class="text-center">Noticias</h2>
 
-      <form class="form" method="POST" enctype="multipart/form-data"> 
+      <form class="form  mx-auto d-block" style="width: 80%;" method="POST" enctype="multipart/form-data"> 
 
       <input class="from-control" value='<?php echo $noticias->id;?>' type="hidden"  name="id"   >
 
 
         <div class="form-group">
-          <label for="exampleInputEmail1">Titulo</label>
+          <label for="exampleInputEmail1"><strong>Titulo<strong></label>
           <input type="text" value='<?php echo $noticias->titulo;?>' name="titulo" id="titulo" class="form-control"  required aria-describedby="emailHelp" placeholder="Titulo">
         </div>
         
         <div class="form-group">
-          <label for="exampleInputPassword1">Fecha</label>
+          <label for="exampleInputPassword1"><strong>Fecha<strong></label>
           <input type="date" value='<?php echo $noticias->fecha;?>'  name="fecha"  id="fecha" class="form-control"  placeholder="Fecha" required>
         </div>
 
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">Resumen</label>
+            <label for="exampleFormControlTextarea1"><strong>Resumen</strong></label>
             <textarea value='<?php echo $noticias->resumen;?>' class="form-control" name="resumen" id="resumen" rows="3" required></textarea>
           </div>
 
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">Contenido</label>
+            <label for="exampleFormControlTextarea1"><strong>Contenido<strong></label>
             <textarea value='<?php echo $noticias->contenido;?>' class="form-control" name="contenido" required id="contenido" rows="3"></textarea>
           </div>
 
           <input type="file" name="imagen" required >
    
-        <button type="submit" class="btn btn-primary mx-auto d-block">Agregar</button>
+        <button type="submit" class="btn btn-primary my-1 mx-auto d-block">Agregar</button>
 
       </form>
     </div>
 
+    
                 <section class="container">
-
+                <table class="table table-hover table-striped mb-5">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Titulo</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Resumen</th>
+      <th scope="col">Contenido</th>
+      <th scope="col">Editar</th>
+    </tr>
+  </thead>
+  <tbody>
+    
                <?php 
-
                   
                         $CI =& GET_instance();
 
@@ -170,22 +181,27 @@ Esperemos que sean noticas buenas.
                                 $contenido =  $fila['contenido'];
                                 $imagen =  $fila['imagen'];
 
-                                $url = base_url("index.php/Usuario/noticias_user/{$fila['id']}");
+                                
+             $url = base_url("index.php/Admin/Noticias/{$fila['id']}");
               echo "
               <div class='col-sm-4'>
               <p>
-              $titulo
-              $fecha
-              $resumen
-              $contenido
+              <tr>
+                <td>$titulo</td>
+                <td>$fecha</td>
+                <td>$resumen</td>
+                <td>$contenido</td>
+                <td><a class='btn btn-warning' href='{$url }'>Editar</a></td>
+              </tr>
               </div>
             
               ";    
-       
-
-           
                         }
             ?>
+
+</tbody>
+</table>
+
                 </section>
 
     </div> 

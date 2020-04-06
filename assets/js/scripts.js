@@ -105,7 +105,7 @@ jQuery(document).ready(function() {
 	    var postdata = $('.section-6-form form').serialize();
 	    $.ajax({
 	        type: 'POST',
-	        url: 'assets/contact.php',
+	        url: base_url +'assets/contact.php',         
 	        data: postdata,
 	        dataType: 'json',
 	        success: function(json) {
