@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>COVID-RD20</title>
 
     <link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/bootstrap/dist/css/bootstrap.min.css') ?> >
     <link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/font-awesome/css/font-awesome.min.css') ?> >
@@ -27,28 +27,28 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-              
-               
+             
+                <a class="navbar-brand" href=" <?php echo base_url('index.php/Usuario'); ?>">COVID-RD20</a>
+
+            </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                   
-                <li class="active">
-                        <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    <li class="active">
+                        <a href="<?php echo base_url('index.php/Usuario'); ?>"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
                   
-                    <h3 class="menu-title text-center">TEMA</h3>
-
                  
-                    <li class="active">
+                    <li class="">
                         <a href="<?php echo base_url('index.php/Usuario/Casos_user/Casos_user');?>"> <i class="menu-icon fa fa-plus"></i>Agregar casos</a>
                     </li>
                     <li class="">
                         <a href="<?php echo base_url('index.php/Usuario/noticias_user');?>"> <i class="menu-icon fa fa-plus"></i>Agregar noticias</a>
                     </li>
+               
                 
                     <li class="">
-                        <a href="<?php echo site_url('Login/logout');?>"> <i class="menu-icon fa fa-plus"></i>Cerrar session</a>
+                        <a href="<?php echo site_url('Login/logout');?>"> <i class="menu-icon fas ti-close"></i>Cerrar session</a>
                     </li>
           
             </div>
@@ -66,7 +66,34 @@
                 <div class="col-sm-12">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
                   
-                
+                    <?php
+						$CI =& GET_instance();
+
+						$usuario =  $this->session->userdata('usuario');
+
+						$rs=$CI->db->query("Select * from users_tbl where usuario = '$usuario' " )->result_array();
+
+
+						foreach($rs as $fila){
+
+							$nombre=  $fila['nombre'];
+							$foto=  $fila['foto'];
+						
+						}
+						$img = base_url($foto);
+
+						echo "  <h1 class='display-4 text-center'>
+						<div class='row'>
+						<div class='col-sm-12'>
+						<img src='$img' class='rounded-circle' alt='Cinque Terre'> 
+						<h4 class='display-5 text-center'>Usuario $nombre</h4>
+						
+						</div>
+
+					";
+
+						?>
+              
                 </div>
             </div>
 

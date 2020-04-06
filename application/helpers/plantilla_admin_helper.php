@@ -15,9 +15,10 @@ class plantilla_admin
 	{
 ?>
 
-
+         
 	<!DOCTYPE html>
 <head>
+<title>COVID-RD20</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/bootstrap/dist/css/bootstrap.min.css') ?> >
     <link rel='stylesheet' type="text/css" href=<?php echo base_url('admin_desing/vendors/font-awesome/css/font-awesome.min.css') ?> >
@@ -52,35 +53,29 @@ class plantilla_admin
                     <i class="fa fa-bars"></i>
                 </button>
               
-                <a class="navbar-brand" href=" <?php echo base_url('index.php/Admin'); ?>"><img src="images/logo.png" alt="Logo"></a>
-                <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
-
+                <a class="navbar-brand" href=" <?php echo base_url('index.php/Admin'); ?>">COVID-RD20</a>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                        <a href="<?php echo base_url('index.php/Admin'); ?>"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
                   
                     <li class="active">
                         <a href=<?php echo base_url('index.php/Admin/admin_usuarios'); ?>> <i class="menu-icon fa fa-user"></i>Usuarios </a>
                     </li>
 
-                    <h3 class="menu-title text-center">TEMA</h3>
-
-                 
                     <li class="">
                         <a href="<?php echo base_url('index.php/Admin/Casos/Casos');?>"> <i class="menu-icon fa fa-plus"></i>Agregar casos</a>
                     </li>
                     <li class="">
                         <a href="<?php echo base_url('index.php/Admin/noticias');?>"> <i class="menu-icon fa fa-plus"></i>Agregar noticias</a>
                     </li>
-                 
                 
                     <li class="">
-                        <a href="<?php echo site_url('Login/logout');?>"> <i class="menu-icon fa fa-plus"></i>Cerrar session</a>
-                    </li>
+                        <a href="<?php echo site_url('Login/logout');?>"> <i class="menu-icon fas ti-close"></i>Cerrar session</a>
+                    </li> 
           
             </div>
         </nav>
@@ -89,42 +84,7 @@ class plantilla_admin
  <div id="right-panel" class="right-panel">
 
 <!-- Header-->
-<header id="header" class="header">
 
-    <div class="header-menu">
-    
-        <div class="col-sm-12">
-            <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-          
-            <h1 class="display-4 text-center">ADMIN</h1>
-              
-        
-        </div>
-    </div>
-
-</header><!-- /header -->
-<!-- Header-->
-
-<div class="breadcrumbs">
-    <div class="col-sm-4">
-        <div class="page-header float-left">
-            <div class="page-title">
-                <h1>Dashboard</h1>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-8">
-        <div class="page-header float-right">
-            <div class="page-title">
-                <ol class="breadcrumb text-right">
-                    <li class="active">Dashboard</li>
-                </ol>
-            </div>
-        </div>
-    </div>
-</div>
-
- <div id="content" class="p-4 p-md-5 pt-5">
 
 <?php
 
