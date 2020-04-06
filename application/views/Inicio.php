@@ -52,8 +52,8 @@ plantilla::aplicar();
                     $date = date_create($fecha);
                     $fechaSi=date_format($date, 'D d/m/Y');
 
-                    $url = base_url("index.php/Usuario/noticias_user/{$fila['id']}");
                     $img = base_url($imagen);
+                    $pagina = base_url()."index.php/ControladorPrincipal/noticia_completa?id={$fila['id']}";
 
                 echo "<div class='col-xs-12 col-md-6 col-lg-3'>
         <div class='card'>
@@ -63,6 +63,10 @@ plantilla::aplicar();
             <p class='card-text'>$resumen</p>
         </div>
         <br>
+        <div class='text-center'>
+        <a href='$pagina' class='btn btn-primary'>Ver mas</a>
+        </div>
+        <br>
         <div class='card-footer'>
             <small class='text-muted'>Publicación: $fechaSi</small>
         </div>
@@ -70,7 +74,7 @@ plantilla::aplicar();
         </div>";}
                 ?>
 
-
+<a href=""></a>
             </div>
         </div>
     </div>

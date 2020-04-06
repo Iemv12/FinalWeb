@@ -8,4 +8,9 @@ class ControladorPrincipal extends CI_Controller {
 		$this->load->helper('urlFunction');
 		$this->load->view('Inicio');
 	}
+
+	 function noticia_completa()
+	{
+		$this->load->view('noticia_completa');
+	}
 }
