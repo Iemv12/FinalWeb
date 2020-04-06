@@ -375,13 +375,14 @@ plantilla_admin::aplicar();
 		$nombre=  $fila['nombre'];
 		$apellido=  $fila['apellido'];
 		$cedula=  $fila['cedula'];
-        $Pais=  $fila['Pais'];
+        $pais=  $fila['pais'];
         $fecha_contagio=  $fila['fecha_contagio'];
    
        echo " 
        <tr class='text-center'>
            <td>$nombre $apellido</td>
-           <td>$cedula</td>
+		   <td>$cedula</td>
+		   <td>$pais</td>
            <td>$fecha_contagio</td>
       </tr>
        ";     
@@ -440,7 +441,7 @@ Le deseamos pronta recuperacion.
 		'text' => $msg
 	];
 
-//	$response = getSslPage("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
+	$response = getSslPage("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
 
     
     $this->RegiCas_model->guardarCasos($casos);

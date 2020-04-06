@@ -7,7 +7,6 @@ public $nombre;
 public $usuario;
 public $email;
 public $password;
-public $foto;
 }
 
 ?>

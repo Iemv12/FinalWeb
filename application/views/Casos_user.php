@@ -376,7 +376,8 @@ plantilla_usuario::aplicar();
        echo " 
        <tr class='text-center'>
            <td>$nombre $apellido</td>
-           <td>$cedula</td>
+		   <td>$cedula</td>
+		   <td>$pais</td>
            <td>$fecha_contagio</td>
       </tr>
        ";     

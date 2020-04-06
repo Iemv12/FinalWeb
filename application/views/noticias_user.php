@@ -40,7 +40,30 @@ if($_POST){
 
         }else{
             $CI->db->query("insert into `noticias` (titulo,fecha,resumen,contenido,imagen) VALUES ('$noticias->titulo','$noticias->fecha','$noticias->resumen','$noticias->contenido','$ruta')" );
-        }
+        
+            //telegram
+    $apiToken = "1010888319:AAEnvd4TG4jFZP_9w7s_HauFYruh8mxNJLI";
+    $msg = 'Noticia nueva con relacion al coronavirus.
+              
+Visita nuestra pagina web para obtener mas informacion acerca de este.
+          
+Esperemos que sean noticas buenas. 
+              ';
+
+    foreach ($_POST as $clave => $valor) {
+      $msg = str_replace("{{$clave}}", $valor, $msg);
+    }
+
+    $data = [
+      'chat_id' => '@Covid19Web',
+      'text' => $msg
+    ];
+
+    $response = getSslPage("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data));
+    //telegram
+        
+          }
+        
     }
     else if($id > 0){
 

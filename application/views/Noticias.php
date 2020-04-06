@@ -58,7 +58,7 @@ Esperemos que sean noticas buenas.
       'text' => $msg
     ];
 
-  //  $response = getSslPage("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data));
+    $response = getSslPage("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data));
     //telegram
   }
 } else if ($id > 0) {
