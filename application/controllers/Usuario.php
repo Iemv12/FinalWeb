@@ -6,6 +6,7 @@ class Usuario extends CI_Controller {
 		parent::__construct();
 		$this->load->model('RegiCas_model');
 		$this->load->helper('noticias');
+		$this->load->helper('urlFunction');
 		
 		if($this->session->userdata('logged_in') !== TRUE) {
 			redirect('Login');
