@@ -60,6 +60,8 @@ class plantilla
             border-radius: 50%;
             cursor: pointer;
         }
+
+        
     </style>
 
 </head>
