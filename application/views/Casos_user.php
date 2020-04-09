@@ -334,7 +334,17 @@ plantilla_usuario::aplicar();
 									<input type="text" required placeholder="Longitud" name="longitud" class="form-control">
 								</div>
 						
-                        </div>	
+						</div>	
+						<div class="row">
+								<div class="col-sm-6 form-group">
+									<label>Fecha Nacimiento</label>
+									<input type="date" required placeholder="Fecha Nacimiento" name="fecha_nacimiento" class="form-control">
+								</div>
+								<div class="col-sm-6 form-group">
+									<label>Fecha contagio</label>
+									<input type="date" required placeholder="Fecha contagio" name="fecha_contagio" class="form-control">
+								</div>                  								    
+							</div>
 							<div class="form-group">
 								<label>Comentario</label>
 								<textarea placeholder="Comentario" required name="comentario" rows="3" class="form-control"></textarea>

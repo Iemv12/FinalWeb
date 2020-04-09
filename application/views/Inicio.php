@@ -88,13 +88,6 @@ plantilla::aplicar();
         <canvas id="myChart" width="410" height="120"></canvas>
     </div>
 </div>
-
-
-
-
-                <canvas id="myChart" width="410" height="120"></canvas>
-			        </div>
-		        </div>
            
              <div class="section-6-container section-container section-container-image-bg" id="section-6">
 			        <div class="container">
